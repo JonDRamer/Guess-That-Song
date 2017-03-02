@@ -12,7 +12,10 @@ $(function() {
         "344799727", "162337613", "121695005", "159293848", "305118379"
     ];
 
-    var itunesdata = {};
+    let itunesdata = {};
+    let correctGuesses = 0;
+    let incorrectGuesses = 0;
+
 
     $('#button')
         .on('click', function() {
@@ -39,8 +42,6 @@ $(function() {
 
     $('#check-guess')
         .on('click', function() {
-            let correctGuesses = 0;
-            let incorrectGuesses = 0;
             let userGuess = $('#guess')
                 .val();
             let guessCorrect = false;
@@ -48,15 +49,17 @@ $(function() {
             for (let key in itunesdata) {
                 if (itunesdata[key] === userGuess) {
                     guessCorrect = true;
-                    correctGuesses++;
                 }
-                incorrectGuesses++;
             }
-            console.log(correctGuesses);
-            console.log(incorrectGuesses);
-
-
-            alert('your guess was ' + guessCorrect)
+            if (guessCorrect === true) {
+                correctGuesses += 1;
+            } else {
+                incorrectGuesses += 1;
+            }
+            $('.score1')
+                .text(correctGuesses);
+            $('.score2')
+                .text(incorrectGuesses);
         });
 
 });
