@@ -1,5 +1,5 @@
 # Guess That Song
-![App Screenshot]()
+![App Screenshot](https://github.com/JonDRamer/Guess-That-Song/blob/master/screenshots/itunes.png)
 
 ### Technologies used:
 
@@ -18,6 +18,3 @@
 ###### This was my first time using AJAX so I learned a lot about asynchronisity and promises.
 
 ###### I learned a lot more about how jQuery event triggers work. This was also my first time using jQuery in a web application.
-
-### Screenshots
-![App Screenshot]()
